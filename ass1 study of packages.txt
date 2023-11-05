@@ -1,0 +1,31 @@
+//tenserflow
+import tensorflow as tf
+import theano as T
+
+print(tf.__version__)
+
+print(tf.reduce_sum(tf.random.normal([1000,1000])))
+
+//keras
+from keras import datasets
+
+(train_images,train_labels),(test_images,test_labels)=datasets.mnist.load_data()
+
+train_images.shape,test_images.shape
+
+//theno
+import numpy
+from theano import function
+
+x = T.dscalar('x')
+y = T.dscalar('y')
+z = x + y
+
+f = function([x,y],z)
+
+f(5,7)
+
+//pyTorch
+import torch
+import torch.nn as nn
+print(torch.__version__)
